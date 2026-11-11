@@ -1,175 +1,266 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Chakesar Medicose</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f6b52"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0b4d3b"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eaf1ef;--sf:#fff;--ink:#12302b;--mut:#5d7771;--ln:#d3e1dc;--ac:#0f6b52;--ac2:#e3f2ed;--warn:#b4531a;--bad:#b3261e;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1816;--sf:#142521;--ink:#e3f1ed;--mut:#92b0a8;--ln:#254039;--ac:#3dbf98;--ac2:#17332c;--warn:#e8935a;--bad:#ff8a80;--on:#06201a;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0d1816;--sf:#142521;--ink:#e3f1ed;--mut:#92b0a8;--ln:#254039;--ac:#3dbf98;--ac2:#17332c;--warn:#e8935a;--bad:#ff8a80;--on:#06201a;color-scheme:dark}
-*{box-sizing:border-box}[hidden]{display:none!important}.dv{margin-top:16px;font-size:13px;color:var(--mut);text-align:center}.dv a{color:var(--ac);font-weight:700;text-decoration:none}footer.dv{padding:8px 16px 24px}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{--bg:#e9f1ee;--sf:#fff;--ink:#10302a;--mut:#5b756e;--ln:#d6e3df;--ac:#0d6b52;--ac2:#e1f2ec;--warn:#c2570f;--bad:#c0322b;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1613;--sf:#13241f;--ink:#e3f1ed;--mut:#8fb0a7;--ln:#233c35;--ac:#3dbf98;--ac2:#173229;--warn:#ee9a62;--bad:#ff8a80;--on:#05201a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1613;--sf:#13241f;--ink:#e3f1ed;--mut:#8fb0a7;--ln:#233c35;--ac:#3dbf98;--ac2:#173229;--warn:#ee9a62;--bad:#ff8a80;--on:#05201a;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Manrope,system-ui,sans-serif}
-button,input,select,textarea{font:inherit;color:inherit}
-.hd{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--sf);border-bottom:1px solid var(--ln)}
-.hd b{font-size:18px;font-weight:800;flex:1}.hd small{display:block;color:var(--mut);font-weight:400;font-size:12px}
-nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:var(--sf);border-bottom:1px solid var(--ln)}
-nav button{white-space:nowrap;border:1px solid var(--ln);background:none;border-radius:20px;padding:7px 14px;cursor:pointer;font-weight:600}
-nav button.on{background:var(--ac);color:var(--on);border-color:var(--ac)}
-main{padding:16px;max-width:1100px;margin:auto}
-h2{margin:0 0 12px;font-size:20px;font-weight:800}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--ln);border-radius:11px;background:var(--sf)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:1px}
+.hd{display:flex;align-items:center;gap:10px;padding:12px 16px;background:linear-gradient(120deg,#0a4435,#14896a);color:#fff}
+.hd b{font-size:18px;font-weight:800;flex:1;line-height:1.15}.hd small{display:block;color:#c4eadf;font-weight:400;font-size:12px}
+.bt{border:0;background:var(--ac);color:var(--on);padding:10px 18px;border-radius:11px;font-weight:700;white-space:nowrap}
+.bt.s{background:var(--ac2);color:var(--ac)}.bt.d{background:none;color:var(--bad);padding:8px 10px}.hd .bt.s{background:#ffffff26;color:#fff;padding:8px 12px}.hd #ins{background:#fff;color:#0a4435;padding:8px 12px}
+main{padding:16px 16px 110px;max-width:1100px;margin:auto}
+h2{margin:0 0 12px;font-size:20px;font-weight:800}h3{margin:0 0 6px;font-size:16px;font-weight:800}
 .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
-.t{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px}
-.t span{display:block;color:var(--mut);font-size:12.5px}.t b{font-size:20px;font-weight:800}
-.t.w b{color:var(--warn)}.t.p b{color:var(--ac)}.t.n b{color:var(--bad)}
-.bar{display:flex;gap:8px;margin-bottom:12px}
-.bar input{flex:1;min-width:0}
-input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--ln);border-radius:9px;background:var(--sf)}
-.bt{border:0;background:var(--ac);color:var(--on);padding:9px 16px;border-radius:9px;font-weight:700;cursor:pointer;white-space:nowrap}
-.bt.s{background:var(--ac2);color:var(--ac)}.bt.d{background:none;color:var(--bad);padding:6px 8px}
-.w2{overflow-x:auto;background:var(--sf);border:1px solid var(--ln);border-radius:12px}
-table{border-collapse:collapse;width:100%;min-width:560px}
-th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--ln);white-space:nowrap}
-th{font-size:12.5px;color:var(--mut);font-weight:600}td.r,th.r{text-align:right}
-td.w{color:var(--warn);font-weight:700}td.p{color:var(--ac);font-weight:700}td.n{color:var(--bad);font-weight:700}
-.em{padding:28px;text-align:center;color:var(--mut)}
-dialog{border:1px solid var(--ln);border-radius:14px;background:var(--sf);color:var(--ink);width:min(440px,94vw);padding:18px}
-dialog::backdrop{background:#0008}
-label{display:block;font-size:12.5px;color:var(--mut);margin:10px 0 3px}
-.ac{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
-#lg{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--ac)}
-#lg .c{background:var(--sf);border-radius:18px;padding:28px 24px;width:min(360px,100%);text-align:center}
-#lg h1{margin:12px 0 2px;font-size:24px;font-weight:800}#lg p{margin:0 0 18px;color:var(--mut)}
-#er{color:var(--bad);min-height:20px;margin:8px 0 0;font-size:13px}
-textarea{height:180px;font:12px/1.4 monospace}
-.hd{background:linear-gradient(120deg,#0b4d3b,#14896a);color:#fff;border:0}.hd small{color:#c4eadf}.hd .bt.s{background:#ffffff26;color:#fff}.hd #ins{background:#fff;color:#0b4d3b}
-#lg{background:linear-gradient(135deg,#0b4d3b,#14896a 70%,#2fc79a)!important}
-.t{border-radius:14px;box-shadow:0 1px 2px #0000000d}
-.hero{position:relative;overflow:hidden;border-radius:22px;padding:22px;color:#fff;margin-bottom:16px;background:radial-gradient(circle at 92% -10%,#2fc79a66,transparent 45%),radial-gradient(circle at 0 110%,#06281f,transparent 55%),linear-gradient(135deg,#0e6049,#0a3d31);box-shadow:0 16px 32px -16px #0a3d31}
-.hero small{opacity:.8;display:block}.hero .big{font-size:clamp(32px,9vw,46px);font-weight:800;letter-spacing:-.02em;margin:2px 0 16px}
-.hr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.hr div{background:#ffffff1f;border-radius:13px;padding:10px 12px}.hr span{display:block;font-size:12px;opacity:.85}.hr b{font-size:15px}
+.t,.k,.card,.cd{background:var(--sf);border:1px solid var(--ln);border-radius:16px;box-shadow:0 1px 3px #0000000d}
+.t{padding:12px}.t span{display:block;color:var(--mut);font-size:12.5px}.t b{font-size:19px;font-weight:800}.t.w b{color:var(--warn)}.t.p b{color:var(--ac)}.t.n b{color:var(--bad)}
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:20px;color:#fff;margin-bottom:16px;background:radial-gradient(circle at 92% -10%,#2fc79a77,transparent 45%),radial-gradient(circle at 0 110%,#04251c,transparent 55%),linear-gradient(135deg,#0e6049,#093a2e);box-shadow:0 18px 34px -18px #093a2e}
+.hero::after{content:"";position:absolute;right:-26px;top:-26px;width:150px;height:150px;opacity:.08;background:linear-gradient(#fff,#fff) center/34% 100% no-repeat,linear-gradient(#fff,#fff) center/100% 34% no-repeat;pointer-events:none}
+.hero small{opacity:.85;display:block}.hero .big{font-size:clamp(32px,9vw,48px);font-weight:800;letter-spacing:-.02em;margin:2px 0 16px}
+.hl{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.mp{display:flex;align-items:center;gap:2px;background:#ffffff22;border-radius:20px;padding:2px}.mp span{padding:0 8px;font-weight:700;font-size:13px}.mp button{border:0;background:none;color:#fff;width:30px;height:30px;font-size:20px;border-radius:50%}.mp button:disabled{opacity:.3}
+.hr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.hr div{background:#ffffff1f;border-radius:14px;padding:10px 12px}.hr span{display:block;font-size:12px;opacity:.85}.hr b{font-size:15px}
 .qa{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
-.qa button,.k{border:1px solid var(--ln);background:var(--sf);color:var(--ink);cursor:pointer;box-shadow:0 1px 2px #0000000d}
-.qa button{border-radius:14px;padding:12px 4px;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:600;font-size:13px}
+.qa button,.mg button{border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:16px;padding:12px 4px;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:600;font-size:13px;box-shadow:0 1px 3px #0000000d}
 .ch{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--ac2);color:var(--ac);flex:none}
 .ch.w{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}.ch.n{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
-.k{display:flex;gap:12px;align-items:center;text-align:left;border-radius:16px;padding:14px}.k span{display:block;color:var(--mut);font-size:12.5px}.k b{font-size:17px;font-weight:800}
-.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:16px;box-shadow:0 1px 2px #0000000d}.card h3{margin:0 0 4px;font-size:16px;font-weight:800}
-.two{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:860px){.two{grid-template-columns:3fr 2fr}}
+.k{display:flex;gap:12px;align-items:center;text-align:left;padding:14px;color:var(--ink)}.k span{display:block;color:var(--mut);font-size:12.5px}.k b{font-size:17px;font-weight:800}
+.card{padding:16px}.two{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}@media(min-width:860px){.two{grid-template-columns:1fr 1fr}}
+.pl{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--ln);font-size:14px}.pl em{font-style:normal;font-weight:700;white-space:nowrap}
+.pl.tt{font-weight:800;border-bottom:0;border-top:2px solid var(--ln);margin-top:4px;padding-top:10px;font-size:15px}.pl .m{color:var(--bad)}.pl .a,.pl .ok{color:var(--ac)}
 .lg{display:flex;gap:14px;font-size:12.5px;color:var(--mut);margin:4px 0 8px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
-.rw{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--ln)}.rw:last-child{border:0}.rw div:nth-child(2){flex:1;min-width:0}.rw b{display:block;font-size:14px}.rw span{font-size:12.5px;color:var(--mut)}.rw em{font-style:normal;font-weight:800}
-.sh{display:flex;justify-content:space-between;align-items:baseline}.sh h2{margin:0 0 12px}
+.rw{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--ln)}.rw:last-child{border:0}.rw div:nth-child(2){flex:1;min-width:0}.rw b{display:block;font-size:14px}.rw span,.su{font-size:12.5px;color:var(--mut)}.rw em{font-style:normal;font-weight:800}
+.bar{display:flex;gap:8px;margin-bottom:12px}.bar input{flex:1;min-width:0}
+.cl{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.cd{padding:14px}
+.tp{display:flex;justify-content:space-between;gap:10px}.cd b{font-size:15px}.am{font-weight:800;font-size:16px;white-space:nowrap}
+.pr{height:6px;border-radius:6px;background:var(--ln);margin:10px 0 8px;overflow:hidden}.pr i{display:block;height:100%;background:var(--ac);border-radius:6px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px;background:var(--ac2);color:var(--ac);margin:0 4px 4px 0}.chip.w{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.ac2{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.ac2 .bt{padding:7px 12px;font-size:13px}
+.em0{padding:34px 16px;text-align:center;color:var(--mut)}
+.bn{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;background:var(--sf);border-top:1px solid var(--ln);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.bn button{flex:1;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11.5px;font-weight:600;color:var(--mut);padding:5px 0;border-radius:12px}.bn button.on{color:var(--ac);background:var(--ac2)}
+.fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:25;width:54px;height:54px;border-radius:50%;border:0;color:#fff;display:grid;place-items:center;background:linear-gradient(135deg,#14896a,#0a4435);box-shadow:0 10px 24px -6px #0a4435}
+dialog{border:1px solid var(--ln);border-radius:18px;background:var(--sf);color:var(--ink);width:min(440px,94vw);padding:18px;max-height:92vh}dialog::backdrop{background:#0009}
+label{display:block;font-size:12.5px;color:var(--mut);margin:10px 0 3px}.ac{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.fe{color:var(--bad);font-size:13px;min-height:18px;margin-top:8px}.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tst{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#10302a;color:#fff;padding:10px 16px;border-radius:12px;z-index:99;display:flex;gap:16px;align-items:center;box-shadow:0 10px 30px #0006}.tst button{background:none;border:0;color:#7fe0c0;font-weight:800}
+.dv{margin-top:16px;font-size:13px;color:var(--mut);text-align:center}.dv a{color:var(--ac);font-weight:700;text-decoration:none}footer.dv{padding:0 16px 24px}
+#lg{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative;overflow:hidden;background:linear-gradient(140deg,#073a2d,#0e7357 60%,#2fc79a)}
+#lg::before,#lg::after{content:"";position:absolute;border-radius:50%;background:#ffffff14}#lg::before{width:340px;height:340px;left:-120px;top:-90px}#lg::after{width:260px;height:260px;right:-80px;bottom:-60px}
+#lc{position:relative;z-index:1;background:var(--sf);border-radius:24px;padding:28px 24px;width:min(380px,100%);text-align:center;box-shadow:0 30px 60px -20px #031f17}
+#lc h1{margin:12px 0 2px;font-size:25px;font-weight:800}#lc p{margin:0 0 18px;color:var(--mut)}#lc input{margin-bottom:8px;text-align:left}
+.lk{background:none;border:0;color:var(--ac);font-weight:700;margin-top:12px}.pw{position:relative}.pw button{position:absolute;right:8px;top:6px;background:none;border:0;color:var(--ac);font-weight:700;font-size:13px;padding:6px}
+.sms{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(420px,94vw);z-index:120;background:#10302a;color:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 14px 34px #0008;font-size:14px}.sms small{color:#8fd9c0;display:block}
+.aip{position:fixed;right:0;bottom:0;z-index:70;width:min(440px,100%);height:min(620px,86vh);background:var(--sf);border:1px solid var(--ln);border-radius:22px 22px 0 0;display:flex;flex-direction:column;box-shadow:0 -10px 40px #0004}
+.aip .ah{display:flex;align-items:center;gap:10px;padding:12px 14px;background:linear-gradient(120deg,#0a4435,#14896a);color:#fff;border-radius:22px 22px 0 0}.aip .ah b{flex:1}.aip .ah button{background:#ffffff26;border:0;color:#fff;border-radius:10px;padding:6px 10px}
+#am{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}.mb{max-width:86%;padding:10px 13px;border-radius:16px;font-size:14px}.mb.b{background:var(--ac2);align-self:flex-start;border-bottom-left-radius:4px}.mb.u{background:var(--ac);color:var(--on);align-self:flex-end;border-bottom-right-radius:4px}
+#aq{display:flex;gap:6px;overflow-x:auto;padding:0 14px 8px}#aq button{white-space:nowrap;border:1px solid var(--ln);background:var(--sf);border-radius:18px;padding:6px 12px;font-size:13px;color:var(--ac);font-weight:600}
+.ai2{display:flex;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--ln)}textarea{height:180px;font:12px/1.4 monospace}
 </style></head><body>
-<div id="lg"><div class="c"><div id="lgo"></div><h1>Chakesar Medicose</h1><p>Sign in to continue</p>
-<input id="pw" type="password" placeholder="Password" autocomplete="current-password">
-<div id="er"></div><button class="bt" style="width:100%;margin-top:6px" id="go">Login</button><div class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></div></div></div>
+<div id="sms" class="sms" hidden></div>
+<div id="lg"><div id="lc"></div></div>
 <div id="app" hidden>
-<div class="hd"><span id="hlo"></span><b>Chakesar Medicose<small>Business manager</small></b><button class="bt" id="ins" hidden>Install app</button><button class="bt s" id="out">Logout</button></div>
-<nav id="nv"></nav><main id="mn"></main><footer class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></footer></div>
-<dialog id="dg"><h2 id="dt"></h2><div id="df"></div><div class="ac"><button class="bt s" id="dc">Cancel</button><button class="bt" id="ds">Save</button></div></dialog>
+<div class="hd"><span id="hlo"></span><b>Chakesar Medicose<small>Business manager</small></b><button class="bt" id="ins" hidden>Install app</button><button class="bt s" id="th" aria-label="Switch light or dark theme">Theme</button></div>
+<main id="mn"></main><footer class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></footer>
+<button class="fab" id="fab" aria-label="Open assistant"></button></div>
+<div class="bn" id="bn" hidden></div>
+<div class="aip" id="ai" hidden><div class="ah"><span id="aho"></span><b>Medi Assistant</b><button id="ax">Close</button></div><div id="am"></div><div id="aq"></div><div class="ai2"><input id="ain" placeholder="Ask how to use the app…" autocomplete="off"><button class="bt" id="asd">Send</button></div></div>
+<dialog id="mo"></dialog><dialog id="sc"></dialog>
+<dialog id="dg"><h2 id="dt"></h2><div id="df"></div><div class="fe" id="fe"></div><div class="ac"><button class="bt s" id="dc">Cancel</button><button class="bt" id="ds">Save</button></div></dialog>
 <script>
-const LOGO=(s)=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64" aria-label="Chakesar Medicose logo"><rect width="64" height="64" rx="16" fill="#0f6b52"/><path d="M32 10 50 17v14c0 11-8 19-18 23C22 50 14 42 14 31V17z" fill="#fff"/><path d="M28 21h8v7h7v8h-7v7h-8v-7h-7v-8h7z" fill="#0f6b52"/></svg>`;
-const $=s=>document.querySelector(s),N=v=>+v||0,fmt=n=>N(n).toLocaleString('en-PK'),td=()=>new Date().toISOString().slice(0,10);
-const sum=(R,k)=>R.reduce((a,r)=>a+N(r[k]),0),KEY='cm_data_v2';
-const M={
-invoices:{t:'Purchase invoices',n:'invoice',f:[['inv','Invoice no'],['date','Date','date'],['company','Company'],['sales','Salesman'],['total','Total','number'],['paid','Paid','number'],['note','Note']],c:[['Balance',r=>N(r.total)-N(r.paid),'w']],s:R=>[['Total purchases',sum(R,'total')],['Paid',sum(R,'paid')],['Payable',sum(R,'total')-sum(R,'paid'),'w']]},
-sales:{t:'Sales & profit',n:'sale',f:[['date','Date','date'],['desc','Item / details'],['sale','Sale amount','number'],['cost','Cost','number'],['note','Note']],c:[['Profit',r=>N(r.sale)-N(r.cost),'p']],s:R=>[['Sales',sum(R,'sale')],['Cost',sum(R,'cost')],['Profit',sum(R,'sale')-sum(R,'cost'),'p']]},
-loans:{t:'Loans',n:'loan',f:[['date','Date','date'],['person','Person name'],['dir','Type','select',['Given','Taken']],['amount','Amount','number'],['back','Returned','number'],['note','Note']],c:[['Remaining',r=>N(r.amount)-N(r.back),'w']],s:R=>{const f=d=>R.filter(r=>r.dir==d).reduce((a,r)=>a+N(r.amount)-N(r.back),0);return[['Given, to receive',f('Given'),'p'],['Taken, to pay',f('Taken'),'w']]}},
-rent:{t:'Rent',n:'rent entry',f:[['kind','Property','select',['Center','Dokan','Room','House','Other']],['tenant','Tenant name'],['contact','Contact'],['month','Month','month'],['rent','Rent','number'],['got','Received','number'],['note','Note']],c:[['Due',r=>N(r.rent)-N(r.got),'w']],s:R=>[['Rent total',sum(R,'rent')],['Received',sum(R,'got'),'p'],['Due',sum(R,'rent')-sum(R,'got'),'w']]},
-bills:{t:'Bills',n:'bill',f:[['date','Date','date'],['kind','Bill type','select',['Electricity','Gas','Water','Internet','Other']],['month','Month','month'],['amount','Amount','number'],['st','Status','select',['Unpaid','Paid']],['note','Note']],c:[],s:R=>[['Total bills',sum(R,'amount')],['Unpaid',R.filter(r=>r.st!='Paid').reduce((a,r)=>a+N(r.amount),0),'w']]},
-staff:{t:'Employees',n:'employee',f:[['name','Name'],['tel','Contact'],['start','Start date','date'],['end','End date','date'],['sal','Salary','number'],['adv','Advance','number'],['note','Note']],c:[['Balance',r=>N(r.sal)-N(r.adv),'w'],['Status',r=>r.end?'Left':'Active','']],s:R=>[['Employees',R.filter(r=>!r.end).length+' active'],['Monthly salary',R.filter(r=>!r.end).reduce((a,r)=>a+N(r.sal),0)],['Advance given',sum(R,'adv'),'w']]},
-exp:{t:'Expenses',n:'expense',f:[['date','Date','date'],['kind','Type','select',['Daily','Monthly']],['head','Expense for'],['amount','Amount','number'],['note','Note']],c:[],s:R=>{const m=td().slice(0,7);return[['Total',sum(R,'amount')],['This month',R.filter(r=>(r.date||'').startsWith(m)).reduce((a,r)=>a+N(r.amount),0),'n'],['Today',R.filter(r=>r.date==td()).reduce((a,r)=>a+N(r.amount),0)]]}}
-};
-const SEED={invoices:[{id:'1794194457724',inv:'INV-001',date:'2026-11-09',company:'Bosh Pharma',sales:'Khan',total:'25000',paid:'24000',note:''},{id:'1794194517127',inv:'INV-0002',date:'2026-11-09',company:'Blossom',sales:'Amjid',total:'15000',paid:'13500',note:''},{id:'1794194542036',inv:'INV-0003',date:'2026-11-09',company:'Kamran',sales:'Hilton',total:'12000',paid:'12000',note:''}]};
-let D={},tab='home',q='',mem=false;
-try{D=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){D={}}
-if(!Object.keys(D).length)D=JSON.parse(JSON.stringify(SEED));
-Object.keys(M).forEach(k=>D[k]=D[k]||[]);
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}};
+const $=s=>document.querySelector(s),N=v=>{const n=parseFloat(v);return isFinite(n)?n:0},r2=n=>Math.round(n*100)/100,fmt=n=>r2(N(n)).toLocaleString('en-PK',{maximumFractionDigits:2});
+const ld=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),td=()=>ld(new Date()),cm=()=>td().slice(0,7);
+const sum=(R,f)=>r2(R.reduce((a,r)=>a+N(typeof f=='function'?f(r):r[f]),0)),inM=(d,y)=>(d||'').startsWith(y);
+const ml=y=>new Date(y+'-01T00:00').toLocaleDateString('en',{month:'long',year:'numeric'}),shm=(y,n)=>{const[a,b]=y.split('-').map(Number);return ld(new Date(a,b-1+n,1)).slice(0,7)};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('#lgo').innerHTML=LOGO(72);$('#hlo').innerHTML=LOGO(38);
-function login(){if($('#pw').value==='faizan1122'){try{sessionStorage.setItem('cm_in','1')}catch(e){}mem=true;show()}else{$('#er').textContent='Incorrect password. Please try again.'}}
-function show(){$('#lg').hidden=true;$('#app').hidden=false;render()}
-$('#go').onclick=login;$('#pw').onkeydown=e=>{if(e.key=='Enter')login()};
-$('#out').onclick=()=>{try{sessionStorage.removeItem('cm_in')}catch(e){}mem=false;$('#app').hidden=true;$('#lg').hidden=false;$('#pw').value='';$('#er').textContent=''};
-try{if(sessionStorage.getItem('cm_in'))show()}catch(e){}
+const LOGO=s=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64" aria-label="Chakesar Medicose logo"><rect width="64" height="64" rx="16" fill="#0f6b52"/><path d="M32 10 50 17v14c0 11-8 19-18 23C22 50 14 42 14 31V17z" fill="#fff"/><path d="M28 21h8v7h7v8h-7v7h-8v-7h-7v-8h7z" fill="#0f6b52"/></svg>`;
+const ico=p=>`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${p}"/></svg>`;
+const IC={home:'M3 11l9-8 9 8M5 10v10h14V10',sales:'M3 17l6-6 4 4 8-8M15 7h6v6',exp:'M3 7h15a3 3 0 013 3v8a2 2 0 01-2 2H5a2 2 0 01-2-2zM3 7l2-3h11M17 14h.01',invoices:'M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6',bills:'M13 2L4 14h7l-1 8 9-12h-7z',down:'M12 5v14M6 13l6 6 6-6',up:'M12 19V5M6 11l6-6 6 6',staff:'M16 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9.5 10a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM21 20v-2a4 4 0 00-3-3.9',truck:'M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z',pay:'M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6',bk:'M12 3v12M7 10l5 5 5-5M5 21h14',lock:'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',ai:'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 3v4M17 5h4',more:'M4 6h16M4 12h16M4 18h16'};
+const KEY='cm_data_v3',SEED={invoices:[{id:'1794194457724',inv:'INV-001',date:'2026-11-09',company:'Bosh Pharma',sales:'Khan',total:'25000',paid:'24000',note:''},{id:'1794194517127',inv:'INV-0002',date:'2026-11-09',company:'Blossom',sales:'Amjid',total:'15000',paid:'13500',note:''},{id:'1794194542036',inv:'INV-0003',date:'2026-11-09',company:'Kamran',sales:'Hilton',total:'12000',paid:'12000',note:''}]};
+const M={
+invoices:{t:'Purchase invoices',n:'invoice',req:['company','total'],f:[['inv','Invoice no'],['date','Date','date'],['company','Company'],['sales','Salesman'],['total','Total','number'],['paid','Paid','number'],['note','Note']],s:R=>[['Total purchases',sum(R,'total')],['Paid',sum(R,'paid')],['Payable',sum(R,'total')-sum(R,'paid'),'w']],ti:r=>r.company,su:r=>`${r.inv||'No invoice no'} · ${r.date||''}${r.sales?' · '+r.sales:''}`,am:r=>N(r.total),tot:r=>N(r.total),paid:r=>N(r.paid),pay:r=>({paid:r.total}),pl:'Mark paid'},
+sales:{t:'Sales & profit',n:'sale',req:['sale'],f:[['date','Date','date'],['desc','Item / details'],['sale','Sale amount','number'],['cost','Cost','number'],['note','Note']],s:R=>[['Sales',sum(R,'sale')],['Cost',sum(R,'cost')],['Profit',sum(R,'sale')-sum(R,'cost'),'p']],ti:r=>r.desc||'Sale',su:r=>r.date,am:r=>N(r.sale),pr:r=>r2(N(r.sale)-N(r.cost))},
+exp:{t:'Expenses',n:'expense',req:['head','amount'],f:[['date','Date','date'],['kind','Type','select',['Daily','Monthly']],['head','Expense for'],['amount','Amount','number'],['note','Note']],s:R=>[['Total',sum(R,'amount')],['This month',sum(R.filter(r=>inM(r.date,cm())),'amount'),'n'],['Today',sum(R.filter(r=>r.date==td()),'amount')]],ti:r=>r.head,su:r=>`${r.kind} · ${r.date}`,am:r=>N(r.amount)},
+payroll:{t:'Salary & advances',n:'payment',req:['emp','amount'],f:[['date','Date','date'],['emp','Employee','select',()=>D.staff.filter(s=>!s.end).map(s=>s.name)],['kind','Type','select',['Salary','Advance','Bonus']],['amount','Amount','number'],['note','Note']],s:R=>[['Paid this month',sum(R.filter(r=>inM(r.date,cm())),'amount'),'n'],['Advances (all)',sum(R.filter(r=>r.kind=='Advance'),'amount'),'w'],['Total paid',sum(R,'amount')]],ti:r=>r.emp,su:r=>`${r.kind} · ${r.date}`,am:r=>N(r.amount)},
+staff:{t:'Employees',n:'employee',req:['name','sal'],f:[['name','Name'],['tel','Contact'],['start','Start date','date'],['end','End date','date'],['sal','Monthly salary','number'],['note','Note']],s:R=>[['Active staff',R.filter(r=>!r.end).length+''],['Monthly salaries',sum(R.filter(r=>!r.end),'sal')],['Paid this month',sum(D.payroll.filter(r=>inM(r.date,cm())),'amount'),'n']],ti:r=>r.name,su:r=>`${r.tel||'No contact'} · since ${r.start||'—'}${r.end?' · left '+r.end:''}`,am:r=>N(r.sal),
+ ch:r=>{const P=D.payroll.filter(x=>x.emp==r.name),pm=sum(P.filter(x=>inM(x.date,cm())&&x.kind!='Bonus'),'amount'),left=N(r.sal)-pm,adv=sum(P.filter(x=>x.kind=='Advance'),'amount');return(r.end?'<span class="chip">Left</span>':left>0?`<span class="chip w">Left this month Rs ${fmt(left)}</span>`:'<span class="chip">Paid this month</span>')+(adv?`<span class="chip w">Advances Rs ${fmt(adv)}</span>`:'')}},
+loans:{t:'Loans',n:'loan',req:['person','amount'],f:[['date','Date','date'],['person','Person name'],['dir','Type','select',['Given','Taken']],['amount','Amount','number'],['back','Returned','number'],['note','Note']],s:R=>{const f=d=>sum(R.filter(r=>r.dir==d),r=>N(r.amount)-N(r.back));return[['Given, to receive',f('Given'),'p'],['Taken, to pay',f('Taken'),'w']]},ti:r=>r.person,su:r=>`${r.dir} · ${r.date}`,am:r=>N(r.amount),tot:r=>N(r.amount),paid:r=>N(r.back),pay:r=>({back:r.amount}),pl:'Mark returned'},
+rent:{t:'Rent',n:'rent entry',req:['tenant','rent'],f:[['kind','Property','select',['Center','Dokan','Room','House','Other']],['dir','I am','select',['Paying','Collecting']],['tenant','Tenant / landlord'],['contact','Contact'],['month','Month','month'],['rent','Rent','number'],['got','Paid / received','number'],['note','Note']],s:R=>{const f=d=>sum(R.filter(r=>r.dir==d),r=>N(r.rent)-N(r.got));return[['To collect',f('Collecting'),'p'],['To pay',f('Paying'),'w']]},ti:r=>r.tenant,su:r=>`${r.kind} · ${r.dir} · ${r.month||''}`,am:r=>N(r.rent),tot:r=>N(r.rent),paid:r=>N(r.got),pay:r=>({got:r.rent}),pl:r=>r.dir=='Paying'?'Mark paid':'Mark received'},
+bills:{t:'Bills',n:'bill',req:['kind','amount'],f:[['date','Date','date'],['kind','Bill type','select',['Electricity','Gas','Water','Internet','Other']],['month','Month','month'],['amount','Amount','number'],['st','Status','select',['Unpaid','Paid']],['note','Note']],s:R=>[['Total bills',sum(R,'amount')],['Unpaid',sum(R.filter(r=>r.st!='Paid'),'amount'),'w']],ti:r=>r.kind,su:r=>`${r.month||''} · ${r.date||''}`,am:r=>N(r.amount),st:r=>r.st!='Paid',pay:()=>({st:'Paid'}),pl:'Mark paid'}
+};
+let D={},tab='home',q='',vm=cm(),cur=null;
+try{D=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem('cm_data_v2'))||{}}catch(e){D={}}
+if(!Object.keys(D).length)D=JSON.parse(JSON.stringify(SEED));
+Object.keys(M).forEach(k=>D[k]=Array.isArray(D[k])?D[k]:[]);
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}};
+function calc(y){
+ const S=D.sales.filter(r=>inM(r.date,y)),sale=sum(S,'sale'),gross=r2(sale-sum(S,'cost'));
+ const exp=sum(D.exp.filter(r=>inM(r.date,y)),'amount'),pay=sum(D.payroll.filter(r=>inM(r.date,y)),'amount');
+ const rp=sum(D.rent.filter(r=>r.dir=='Paying'&&r.month==y),'got'),rc=sum(D.rent.filter(r=>r.dir=='Collecting'&&r.month==y),'got');
+ const bill=sum(D.bills.filter(r=>r.st=='Paid'&&inM(r.date,y)),'amount'),loan=sum(D.loans.filter(r=>r.dir=='Given'&&inM(r.date,y)),r=>N(r.amount)-N(r.back));
+ const ded=r2(exp+pay+rp+bill+loan);return{sale,gross,exp,pay,rp,rc,bill,loan,ded,net:r2(gross+rc-ded)};
+}
+const SH=async s=>{try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('cm:'+s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return'p:'+s}};
+const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null};
+const okpw=async p=>{const h=ls('cm_pw');return h?(await SH(p))===h:p==='faizan1122'};
+const phone=()=>ls('cm_ph')||'03485427214',dig=s=>String(s).replace(/\D/g,'').slice(-10);
+let bad=0,lock=0,otp=null;
+function lv(v,m){const c=$('#lc'),hd=`<div style="display:grid;place-items:center">${LOGO(76)}</div><h1>Chakesar Medicose</h1>`,ft='<div class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></div>',er=`<div class="fe" id="le">${m||''}</div>`;
+ if(v=='in')c.innerHTML=`${hd}<p>Sign in to continue</p><div class="pw"><input id="pw" type="password" placeholder="Password" autocomplete="current-password"><button id="sp" type="button">Show</button></div>${er}<button class="bt" style="width:100%" id="go">Login</button><button class="lk" id="fg">Forgot password?</button>${ft}`;
+ if(v=='f1')c.innerHTML=`${hd}<p>Enter your registered mobile number. A 6-digit code will appear on this device.</p><input id="ph" inputmode="tel" placeholder="03XX XXXXXXX">${er}<button class="bt" style="width:100%" id="sn">Send code</button><button class="lk" id="bk">Back to login</button>${ft}`;
+ if(v=='f2')c.innerHTML=`${hd}<p>Enter the code and choose a new password.</p><input id="cd" inputmode="numeric" maxlength="6" placeholder="6-digit code"><input id="n1" type="password" placeholder="New password (min 6 characters)"><input id="n2" type="password" placeholder="Confirm new password">${er}<button class="bt" style="width:100%" id="rs2">Reset password</button><button class="lk" id="bk">Back to login</button>${ft}`;
+ const e=$('#le'),on=(i,f)=>{const x=$(i);if(x)x.onclick=f};
+ on('#sp',()=>{const p=$('#pw');p.type=p.type=='password'?'text':'password';$('#sp').textContent=p.type=='password'?'Show':'Hide'});
+ on('#fg',()=>lv('f1'));on('#bk',()=>lv('in'));
+ const pw=$('#pw');if(pw)pw.onkeydown=ev=>{if(ev.key=='Enter')$('#go').click()};
+ on('#go',async()=>{if(Date.now()<lock){e.textContent='Too many attempts. Wait '+Math.ceil((lock-Date.now())/1000)+' seconds.';return}
+  if(await okpw($('#pw').value)){bad=0;try{sessionStorage.setItem('cm_in','1')}catch(x){}show()}else{bad++;if(bad>=5){lock=Date.now()+30000;bad=0;e.textContent='Too many attempts. Try again in 30 seconds.'}else e.textContent='Incorrect password. Please try again.'}});
+ on('#sn',()=>{if(dig($('#ph').value)!==dig(phone())){e.textContent='This number is not registered.';return}
+  const a=new Uint32Array(1);crypto.getRandomValues(a);otp={c:String(100000+a[0]%900000),t:Date.now()+300000,n:0};
+  const b=$('#sms');b.innerHTML=`<small>Message · Chakesar Medicose</small>Your verification code is <b>${otp.c}</b>. It is valid for 5 minutes. Do not share it.`;b.hidden=false;setTimeout(()=>b.hidden=true,60000);
+  try{if('Notification' in window&&Notification.permission=='granted')new Notification('Chakesar Medicose',{body:'Your verification code is '+otp.c})}catch(x){}
+  lv('f2','Code sent. It appears at the top of the screen.')});
+ on('#rs2',async()=>{if(!otp||Date.now()>otp.t){e.textContent='Code expired. Go back and request a new one.';return}
+  if(++otp.n>5){otp=null;e.textContent='Too many wrong codes. Request a new one.';return}
+  if($('#cd').value.trim()!==otp.c){e.textContent='Incorrect code.';return}
+  const a=$('#n1').value;if(a.length<6){e.textContent='Password must be at least 6 characters.';return}if(a!==$('#n2').value){e.textContent='Passwords do not match.';return}
+  ls('cm_pw',await SH(a));otp=null;$('#sms').hidden=true;lv('in','<span style="color:var(--ac)">Password changed. Please log in.</span>')});
+ if('Notification' in window&&v=='f1'&&Notification.permission=='default')try{Notification.requestPermission()}catch(x){}
+}
+function show(){$('#lg').hidden=true;$('#app').hidden=false;$('#bn').hidden=false;render()}
+const logout=()=>{try{sessionStorage.removeItem('cm_in')}catch(e){}$('#app').hidden=true;$('#bn').hidden=true;$('#ai').hidden=true;$('#lg').hidden=false;lv('in')};
 function render(){
- const tabs=[['home','Dashboard'],...Object.keys(M).map(k=>[k,M[k].t]),['bk','Backup']];
- $('#nv').innerHTML=tabs.map(([k,l])=>`<button class="${k==tab?'on':''}" data-k="${k}">${l}</button>`).join('');
- $('#nv').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.k;q='';render()});
+ const BN=[['home','Home',IC.home],['sales','Sales',IC.sales],['exp','Expenses',IC.exp],['invoices','Invoices',IC.invoices],['more','More',IC.more]];
+ $('#bn').innerHTML=BN.map(([k,l,p])=>`<button class="${k==tab||(k=='more'&&!BN.some(b=>b[0]==tab))?'on':''}" data-k="${k}">${ico(p)}${l}</button>`).join('');
+ $('#bn').querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.k=='more')return more();tab=b.dataset.k;q='';render();scrollTo(0,0)});
  tab=='home'?home():tab=='bk'?backup():list(tab);
 }
+function more(){
+ const it=[['payroll','Salary',IC.pay],['staff','Employees',IC.staff],['loans','Loans',IC.down],['rent','Rent',IC.home],['bills','Bills',IC.bills],['bk','Backup',IC.bk],['sec','Security',IC.lock],['ai','Assistant',IC.ai]],d=$('#mo');
+ d.innerHTML=`<h2>More</h2><div class="mg">${it.map(([k,l,p])=>`<button data-m="${k}"><span class="ch">${ico(p)}</span>${l}</button>`).join('')}</div><div class="ac"><button class="bt s" id="lo">Log out</button><button class="bt" id="mc">Close</button></div>`;
+ d.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{const k=b.dataset.m;d.close();if(k=='sec')return sec();if(k=='ai')return chat();tab=k;q='';render();scrollTo(0,0)});
+ $('#lo').onclick=()=>{d.close();logout()};$('#mc').onclick=()=>d.close();d.showModal();
+}
 const tile=([l,v,c])=>`<div class="t ${c||''}"><span>${l}</span><b>${typeof v=='number'?'Rs '+fmt(v):v}</b></div>`;
-function ico(p){return`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${p}"/></svg>`}
-const IC={sales:'M3 17l6-6 4 4 8-8M15 7h6v6',exp:'M3 7h15a3 3 0 013 3v8a2 2 0 01-2 2H5a2 2 0 01-2-2zM3 7l2-3h11M17 14h.01',invoices:'M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6',bills:'M13 2L4 14h7l-1 8 9-12h-7z',down:'M12 5v14M6 13l6 6 6-6',up:'M12 19V5M6 11l6-6 6 6',rent:'M3 11l9-8 9 8M5 10v10h14V10',staff:'M16 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9.5 10a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM21 20v-2a4 4 0 00-3-3.9',truck:'M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z'};
 function home(){
- const m=td().slice(0,7),inM=r=>(r.date||'').startsWith(m);
- const sl=D.sales.filter(inM),sv=sum(sl,'sale'),pf=sv-sum(sl,'cost'),ex=D.exp.filter(inM).reduce((a,r)=>a+N(r.amount),0),net=pf-ex;
- const lo=d=>D.loans.filter(r=>r.dir==d).reduce((a,r)=>a+N(r.amount)-N(r.back),0);
- const h=new Date().getHours(),g=h<12?'Good morning':h<17?'Good afternoon':'Good evening',dt=new Date().toLocaleDateString('en',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
- const days=[...Array(7)].map((_,i)=>new Date(Date.now()-(6-i)*864e5)),ds=days.map(d=>d.toISOString().slice(0,10));
- const S=ds.map(d=>sum(D.sales.filter(r=>r.date==d),'sale')),E=ds.map(d=>sum(D.exp.filter(r=>r.date==d),'amount')),mx=Math.max(1,...S,...E);
- const bar=(v,x,c)=>{const h=v?Math.max(4,v/mx*96):0;return`<rect x="${x}" y="${108-h}" width="14" height="${h}" rx="4" style="fill:var(${c})"/>`};
- const chart=ds.map((d,i)=>{const x=14+i*44;return bar(S[i],x,'--ac')+bar(E[i],x+16,'--warn')+`<text x="${x+15}" y="128" text-anchor="middle" font-size="10" style="fill:var(--mut)">${days[i].toLocaleDateString('en',{weekday:'short'})}</text>`}).join('');
- const K=[['Suppliers payable',sum(D.invoices,'total')-sum(D.invoices,'paid'),'truck','w','invoices'],['Loan to receive',lo('Given'),'down','','loans'],['Loan to pay',lo('Taken'),'up','n','loans'],['Rent due',D.rent.reduce((a,r)=>a+Math.max(0,N(r.rent)-N(r.got)),0),'rent','w','rent'],['Unpaid bills',D.bills.filter(r=>r.st!='Paid').reduce((a,r)=>a+N(r.amount),0),'bills','w','bills'],['Staff advance',sum(D.staff.filter(r=>!r.end),'adv'),'staff','','staff']];
- const A=[...D.sales.map(r=>({d:r.date,id:r.id,t:r.desc||'Sale',s:'Sale',v:N(r.sale),i:'sales',c:''})),...D.exp.map(r=>({d:r.date,id:r.id,t:r.head||'Expense',s:'Expense',v:-N(r.amount),i:'exp',c:'n'})),...D.invoices.map(r=>({d:r.date,id:r.id,t:r.company||'Invoice',s:'Purchase '+(r.inv||''),v:-N(r.total),i:'invoices',c:'w'}))].sort((a,b)=>(b.d||'').localeCompare(a.d||'')||b.id-a.id).slice(0,6);
- $('#mn').innerHTML=`<div class="hero"><small>${g}, ${dt}</small><small>Net profit this month</small><div class="big">${net<0?'− ':''}Rs ${fmt(Math.abs(net))}</div><div class="hr"><div><span>Sales</span><b>Rs ${fmt(sv)}</b></div><div><span>Profit</span><b>Rs ${fmt(pf)}</b></div><div><span>Expenses</span><b>Rs ${fmt(ex)}</b></div></div></div>
- <div class="qa">${[['sales','Sale'],['exp','Expense'],['invoices','Invoice'],['bills','Bill']].map(([k,l])=>`<button data-add="${k}"><span class="ch">${ico(IC[k])}</span>${l}</button>`).join('')}</div>
- <div class="two" style="margin-bottom:16px"><div class="card"><h3>Last 7 days</h3><div class="lg"><span><i style="background:var(--ac)"></i>Sales</span><span><i style="background:var(--warn)"></i>Expenses</span></div><svg viewBox="0 0 322 136" width="100%" role="img" aria-label="Sales and expenses for the last 7 days"><line x1="0" x2="322" y1="109" y2="109" style="stroke:var(--ln)"/>${chart}</svg></div>
- <div class="card"><h3>Recent activity</h3>${A.length?A.map(a=>`<div class="rw"><span class="ch ${a.c}">${ico(IC[a.i])}</span><div><b>${esc(a.t)}</b><span>${esc(a.s)} · ${esc(a.d)}</span></div><em style="color:var(--${a.v<0?'bad':'ac'})">${a.v<0?'−':'+'}${fmt(Math.abs(a.v))}</em></div>`).join(''):'<div class="em">No activity yet. Add your first sale or expense.</div>'}</div></div>
- <div class="sh"><h2>Outstanding</h2></div><div class="g">${K.map(([l,v,i,c,t])=>`<button class="k" data-go="${t}"><span class="ch ${c}">${ico(IC[i])}</span><div><span>${l}</span><b>Rs ${fmt(v)}</b></div></button>`).join('')}</div>`;
+ const c=calc(vm),h=new Date().getHours(),g=h<12?'Good morning':h<17?'Good afternoon':'Good evening',dt=new Date().toLocaleDateString('en',{weekday:'long',day:'numeric',month:'long'});
+ const days=[...Array(7)].map((_,i)=>new Date(Date.now()-(6-i)*864e5)),ds=days.map(ld);
+ const P=ds.map(d=>sum(D.sales.filter(r=>r.date==d),r=>N(r.sale)-N(r.cost))),E=ds.map(d=>sum(D.exp.filter(r=>r.date==d),'amount')+sum(D.payroll.filter(r=>r.date==d),'amount')+sum(D.bills.filter(r=>r.st=='Paid'&&r.date==d),'amount')),mx=Math.max(1,...P,...E);
+ const bar=(v,x,k)=>{const h=v>0?Math.max(4,v/mx*96):0;return`<rect x="${x}" y="${108-h}" width="14" height="${h}" rx="4" style="fill:var(${k})"/>`};
+ const chart=ds.map((d,i)=>{const x=14+i*44;return bar(P[i],x,'--ac')+bar(E[i],x+16,'--warn')+`<text x="${x+15}" y="128" text-anchor="middle" font-size="10" style="fill:var(--mut)">${days[i].toLocaleDateString('en',{weekday:'short'})}</text>`}).join('');
+ const row=(l,v,k,b)=>`<div class="pl ${b?'tt':''}"><span>${l}</span><em class="${k}">${k=='m'?'− ':k=='a'?'+ ':v<0?'− ':''}Rs ${fmt(Math.abs(v))}</em></div>`;
+ const out=(a,b)=>sum(a,r=>N(r[b[0]])-N(r[b[1]]));
+ const K=[['Suppliers payable',sum(D.invoices,r=>N(r.total)-N(r.paid)),IC.truck,'w','invoices'],['Loan to receive',out(D.loans.filter(r=>r.dir=='Given'),['amount','back']),IC.down,'','loans'],['Loan to pay',out(D.loans.filter(r=>r.dir=='Taken'),['amount','back']),IC.up,'n','loans'],['Rent to collect',out(D.rent.filter(r=>r.dir=='Collecting'),['rent','got']),IC.home,'','rent'],['Rent to pay',out(D.rent.filter(r=>r.dir=='Paying'),['rent','got']),IC.home,'w','rent'],['Unpaid bills',sum(D.bills.filter(r=>r.st!='Paid'),'amount'),IC.bills,'w','bills']];
+ const A=[...D.sales.map(r=>({d:r.date,id:r.id,t:r.desc||'Sale',s:'Sale',v:N(r.sale),i:IC.sales,c:''})),...D.exp.map(r=>({d:r.date,id:r.id,t:r.head,s:'Expense',v:-N(r.amount),i:IC.exp,c:'n'})),...D.payroll.map(r=>({d:r.date,id:r.id,t:r.emp,s:r.kind,v:-N(r.amount),i:IC.pay,c:'n'})),...D.invoices.map(r=>({d:r.date,id:r.id,t:r.company,s:'Purchase '+(r.inv||''),v:-N(r.total),i:IC.invoices,c:'w'}))].sort((a,b)=>(b.d||'').localeCompare(a.d||'')||String(b.id).localeCompare(String(a.id))).slice(0,6);
+ $('#mn').innerHTML=`<div class="hero"><div class="hl"><small>${g} · ${dt}</small><div class="mp"><button data-mv="-1" aria-label="Previous month">‹</button><span>${ml(vm)}</span><button data-mv="1" ${vm>=cm()?'disabled':''} aria-label="Next month">›</button></div></div><small>Net profit</small><div class="big">${c.net<0?'− ':''}Rs ${fmt(Math.abs(c.net))}</div><div class="hr"><div><span>Sales</span><b>Rs ${fmt(c.sale)}</b></div><div><span>Gross profit</span><b>Rs ${fmt(c.gross)}</b></div><div><span>Deductions</span><b>Rs ${fmt(c.ded)}</b></div></div></div>
+ <div class="qa">${[['sales','Sale',IC.sales],['exp','Expense',IC.exp],['payroll','Salary',IC.pay],['bills','Bill',IC.bills]].map(([k,l,p])=>`<button data-add="${k}"><span class="ch">${ico(p)}</span>${l}</button>`).join('')}</div>
+ <div class="two"><div class="card"><h3>Profit statement · ${ml(vm)}</h3>${row('Sales',c.sale,'')}${row('Cost of goods',c.sale-c.gross,'m')}${row('Gross profit',c.gross,'ok',1)}${row('Rent collected',c.rc,'a')}${row('Expenses',c.exp,'m')}${row('Salaries & advances',c.pay,'m')}${row('Rent paid',c.rp,'m')}${row('Bills paid',c.bill,'m')}${row('Loans given (not returned)',c.loan,'m')}${row('Net profit',c.net,c.net<0?'m':'ok',1)}</div>
+ <div class="card"><h3>Last 7 days</h3><div class="lg"><span><i style="background:var(--ac)"></i>Sale profit</span><span><i style="background:var(--warn)"></i>Spending</span></div><svg viewBox="0 0 322 136" width="100%" role="img" aria-label="Sale profit and spending for the last 7 days"><line x1="0" x2="322" y1="109" y2="109" style="stroke:var(--ln)"/>${chart}</svg><h3 style="margin-top:14px">Recent activity</h3>${A.length?A.map(a=>`<div class="rw"><span class="ch ${a.c}">${ico(a.i)}</span><div><b>${esc(a.t)}</b><span>${esc(a.s)} · ${esc(a.d)}</span></div><em style="color:var(--${a.v<0?'bad':'ac'})">${a.v<0?'−':'+'}${fmt(Math.abs(a.v))}</em></div>`).join(''):'<div class="em0">No activity yet. Add your first sale.</div>'}</div></div>
+ <h2>Outstanding</h2><div class="g">${K.map(([l,v,i,c,t])=>`<button class="k" data-go="${t}"><span class="ch ${c}">${ico(i)}</span><div><span>${l}</span><b>Rs ${fmt(v)}</b></div></button>`).join('')}</div>`;
+ const bg=$('#mn .big');if(bg&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const t0=performance.now(),st=t=>{const p=Math.min(1,(t-t0)/800),e=1-Math.pow(1-p,3);bg.textContent=(c.net<0?'− ':'')+'Rs '+fmt(Math.abs(c.net)*e);if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+ $('#mn').querySelectorAll('[data-mv]').forEach(b=>b.onclick=()=>{vm=shm(vm,+b.dataset.mv);home()});
  $('#mn').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{tab=b.dataset.go;q='';render()});
  $('#mn').querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{tab=b.dataset.add;q='';render();edit(tab)});
 }
-function cols(m){return [...m.f.map(([k,l,t])=>({l,t,g:r=>r[k]})),...m.c.map(([l,f,c])=>({l,t:'c',c,g:f}))]}
 function body(k){
- const m=M[k],C=cols(m),s=q.toLowerCase();
- let R=D[k].filter(r=>!s||JSON.stringify(r).toLowerCase().includes(s));
- R=[...R].reverse();
- if(!R.length)return`<div class="em">${D[k].length?'No matching records.':'No '+m.n+' records yet. Tap Add to create one.'}</div>`;
- return`<table><tr>${C.map(c=>`<th class="${c.t=='number'||c.t=='c'&&c.c?'r':''}">${c.l}</th>`).join('')}<th></th></tr>`+R.map(r=>`<tr>${C.map(c=>{const v=c.g(r);const num=c.t=='number'||(c.t=='c'&&c.c);const cl=num?'r':'';const sc=c.t=='c'&&c.c?(c.c=='p'?(v<0?'n':'p'):(v>0?'w':'')):'';return`<td class="${cl} ${sc}">${num?fmt(v):esc(v)}</td>`}).join('')}<td class="r"><button class="bt d" data-e="${r.id}">Edit</button><button class="bt d" data-x="${r.id}">Delete</button></td></tr>`).join('')+'</table>';
+ const m=M[k],s=q.toLowerCase();let R=D[k].filter(r=>!s||JSON.stringify(r).toLowerCase().includes(s));R=[...R].reverse();
+ if(!R.length)return`<div class="em0">${D[k].length?'No matching records.':'No '+m.n+' records yet. Tap Add to create one.'}</div>`;
+ return'<div class="cl">'+R.map(r=>{
+  const due=m.tot?r2(m.tot(r)-m.paid(r)):0,pc=m.tot&&m.tot(r)?Math.min(100,m.paid(r)/m.tot(r)*100):0;let chip='';
+  if(m.tot)chip=due>0?`<span class="chip w">Due Rs ${fmt(due)}</span>`:'<span class="chip">Settled</span>';
+  else if(m.st)chip=m.st(r)?'<span class="chip w">Unpaid</span>':'<span class="chip">Paid</span>';
+  else if(m.pr){const p=m.pr(r);chip=`<span class="chip ${p<0?'w':''}">${p<0?'Loss':'Profit'} Rs ${fmt(Math.abs(p))}</span>`}
+  else if(m.ch)chip=m.ch(r);
+  const can=m.pay&&(m.tot?due>0:m.st(r)),pl=typeof m.pl=='function'?m.pl(r):m.pl;
+  return`<div class="cd"><div class="tp"><div><b>${esc(m.ti(r))}</b><div class="su">${esc(m.su(r))}</div></div><div class="am">Rs ${fmt(m.am(r))}</div></div>${m.tot?`<div class="pr"><i style="width:${pc}%"></i></div>`:''}<div style="margin-top:${m.tot?0:8}px">${chip}<span class="su">${esc(r.note||'')}</span></div><div class="ac2">${can?`<button class="bt" data-p="${r.id}">${pl}</button>`:''}<button class="bt s" data-e="${r.id}">Edit</button><button class="bt d" data-x="${r.id}">Delete</button></div></div>`}).join('')+'</div>';
 }
 function wire(k){
- $('#tb').innerHTML=body(k);
- $('#tb').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(k,b.dataset.e));
- $('#tb').querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{if(confirm('Delete this record?')){D[k]=D[k].filter(r=>r.id!=b.dataset.x);save();render()}});
+ const T=$('#tb');T.innerHTML=body(k);
+ T.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(k,b.dataset.e));
+ T.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{const i=D[k].findIndex(x=>x.id==b.dataset.p),old={...D[k][i]};D[k][i]={...old,...M[k].pay(old)};save();render();toast('Marked as done',()=>{D[k][i]=old;save();render()})});
+ T.querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{const i=D[k].findIndex(x=>x.id==b.dataset.x),old=D[k][i];D[k].splice(i,1);save();render();toast('Record deleted',()=>{D[k].splice(i,0,old);save();render()})});
 }
+function toast(t,u){let e=$('#ts');if(!e){e=document.createElement('div');e.id='ts';e.className='tst';document.body.appendChild(e)}e.hidden=false;e.innerHTML=`<span>${t}</span>${u?'<button>Undo</button>':''}`;if(u)e.querySelector('button').onclick=()=>{u();e.hidden=true};clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,5000)}
 function list(k){
- const m=M[k];
- $('#mn').innerHTML=`<h2>${m.t}</h2><div class="g">${m.s(D[k]).map(tile).join('')}</div><div class="bar"><input id="sq" placeholder="Search" value="${esc(q)}"><button class="bt" id="ad">Add ${m.n}</button></div><div class="w2" id="tb"></div>`;
+ const m=M[k];$('#mn').innerHTML=`<h2>${m.t}</h2><div class="g">${m.s(D[k]).map(tile).join('')}</div><div class="bar"><input id="sq" placeholder="Search" value="${esc(q)}"><button class="bt" id="ad">Add ${m.n}</button></div><div id="tb"></div>`;
  $('#sq').oninput=e=>{q=e.target.value;wire(k)};$('#ad').onclick=()=>edit(k);wire(k);
 }
-let cur=null;
 function edit(k,id){
- const m=M[k],r=id?D[k].find(x=>x.id==id):{};cur={k,id};
- $('#dt').textContent=(id?'Edit ':'New ')+m.n;
- $('#df').innerHTML=m.f.map(([f,l,t,o])=>{const v=r[f]??(t=='date'?td():t=='month'?td().slice(0,7):'');
-  return`<label>${l}</label>`+(t=='select'?`<select data-f="${f}">${o.map(x=>`<option ${x==v?'selected':''}>${x}</option>`).join('')}</select>`:`<input data-f="${f}" type="${t||'text'}" ${t=='number'?'inputmode="decimal"':''} value="${esc(v)}">`)}).join('');
+ const m=M[k],r=id?D[k].find(x=>x.id==id):{};cur={k,id};$('#dt').textContent=(id?'Edit ':'New ')+m.n;$('#fe').textContent='';
+ $('#df').innerHTML=m.f.map(([f,l,t,o])=>{const v=r[f]??(t=='date'?td():t=='month'?cm():'');let op=typeof o=='function'?o():o;if(t=='select'&&!op.includes(v)&&v)op=[...op,v];
+  return`<label>${l}${m.req.includes(f)?' *':''}</label>`+(t=='select'?`<select data-f="${f}">${op.map(x=>`<option ${x==v?'selected':''}>${esc(x)}</option>`).join('')}</select>`:`<input data-f="${f}" type="${t||'text'}" ${t=='number'?'inputmode="decimal" min="0" step="any"':''} value="${esc(v)}">`)}).join('');
  $('#dg').showModal();
 }
+function check(k,o){const m=M[k],L=Object.fromEntries(m.f.map(x=>[x[0],x[1]])),T=Object.fromEntries(m.f.map(x=>[x[0],x[2]]));
+ for(const f of m.req){if(!o[f])return f=='emp'?'Add an employee first, then record the payment.':'Please fill in "'+L[f]+'".';if(T[f]=='number'&&N(o[f])<=0)return '"'+L[f]+'" must be more than zero.'}
+ for(const f in o){if(T[f]=='number'&&o[f]!==''&&!(N(o[f])>=0))return '"'+L[f]+'" must be a valid number.';if(f=='date'&&!o[f])return 'Please choose a date.'}
+ if(k=='invoices'&&N(o.paid)>N(o.total))return 'Paid cannot be more than the total.';
+ if(k=='loans'&&N(o.back)>N(o.amount))return 'Returned cannot be more than the loan amount.';
+ if(k=='rent'&&N(o.got)>N(o.rent))return 'Paid / received cannot be more than the rent.';
+ if(k=='staff'&&o.end&&o.start&&o.end<o.start)return 'End date cannot be before the start date.';return ''}
 $('#dc').onclick=()=>$('#dg').close();
-$('#ds').onclick=()=>{
- const {k,id}=cur,o={};$('#df').querySelectorAll('[data-f]').forEach(e=>o[e.dataset.f]=e.value.trim());
+$('#ds').onclick=()=>{const{k,id}=cur,o={},T=Object.fromEntries(M[k].f.map(x=>[x[0],x[2]]));
+ $('#df').querySelectorAll('[data-f]').forEach(e=>{let v=e.value.trim();if(T[e.dataset.f]=='number'&&v!=='')v=String(r2(N(v.replace(/,/g,''))));o[e.dataset.f]=v});
+ const er=check(k,o);if(er){$('#fe').textContent=er;return}
  if(id){const i=D[k].findIndex(x=>x.id==id);D[k][i]={...D[k][i],...o}}else D[k].push({id:String(Date.now()),...o});
- save();$('#dg').close();render();
+ save();$('#dg').close();render();toast('Saved');
 };
 function backup(){
- $('#mn').innerHTML=`<h2>Backup & restore</h2><p style="color:var(--mut)">Data is saved only on this phone or browser. Copy a backup regularly and keep it in Notes or WhatsApp.</p>
- <div class="bar"><button class="bt" id="cp">Copy backup</button><button class="bt s" id="fl">Open backup file</button><input type="file" id="fi" accept=".json" hidden></div>
- <textarea id="ta" placeholder="Paste a backup here to restore"></textarea>
- <div class="bar" style="margin-top:10px"><button class="bt s" id="rs">Restore from pasted text</button></div><div id="ms" style="color:var(--ac)"></div>`;
+ $('#mn').innerHTML=`<h2>Backup & restore</h2><p class="su">Data is saved only on this phone or browser. Copy a backup regularly and keep it in Notes or WhatsApp.</p><div class="bar"><button class="bt" id="cp">Copy backup</button><button class="bt s" id="fl">Open backup file</button><input type="file" id="fi" accept=".json" hidden></div><textarea id="ta" placeholder="Paste a backup here to restore"></textarea><div class="bar" style="margin-top:10px"><button class="bt s" id="rs">Restore from pasted text</button></div><div id="ms" style="color:var(--ac)"></div>`;
  $('#ta').value=JSON.stringify(D);
  $('#cp').onclick=async()=>{$('#ta').select();try{await navigator.clipboard.writeText($('#ta').value);$('#ms').textContent='Backup copied.'}catch(e){document.execCommand('copy');$('#ms').textContent='Backup selected. Copy it manually.'}};
  $('#fl').onclick=()=>$('#fi').click();
  $('#fi').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('#ta').value=r.result;$('#ms').textContent='File loaded. Tap Restore.'};r.readAsText(f)};
- $('#rs').onclick=()=>{
-  try{let d=JSON.parse($('#ta').value);
-   if(Array.isArray(d))d={invoices:d.map(r=>({...r,id:r.id||String(Date.now()+Math.random())}))};
-   if(!confirm('This will replace the current data. Continue?'))return;
-   D={};Object.keys(M).forEach(k=>D[k]=Array.isArray(d[k])?d[k]:[]);save();render();
-  }catch(e){$('#ms').style.color='var(--bad)';$('#ms').textContent='Invalid backup.'}
- };
+ $('#rs').onclick=()=>{try{let d=JSON.parse($('#ta').value);if(Array.isArray(d))d={invoices:d.map((r,i)=>({...r,id:r.id||String(Date.now()+i)}))};
+  if(!confirm('This will replace the current data. Continue?'))return;D={};Object.keys(M).forEach(k=>D[k]=Array.isArray(d[k])?d[k]:[]);save();render()}catch(e){$('#ms').style.color='var(--bad)';$('#ms').textContent='Invalid backup.'}};
 }
-let ev=null;
-addEventListener('beforeinstallprompt',e=>{e.preventDefault();ev=e;$('#ins').hidden=false});
+function sec(){
+ const d=$('#sc');d.innerHTML=`<h2>Security</h2><label>Current password</label><input id="s0" type="password"><label>New password (leave empty to keep)</label><input id="s1" type="password"><label>Confirm new password</label><input id="s2" type="password"><label>Recovery mobile number</label><input id="s3" inputmode="tel" value="${esc(phone())}"><div class="fe" id="se"></div><div class="ac"><button class="bt s" id="sx">Cancel</button><button class="bt" id="sv">Save</button></div>`;
+ $('#sx').onclick=()=>d.close();
+ $('#sv').onclick=async()=>{const e=$('#se');if(!(await okpw($('#s0').value))){e.textContent='Current password is incorrect.';return}
+  const a=$('#s1').value;if(a&&a.length<6){e.textContent='New password must be at least 6 characters.';return}if(a&&a!==$('#s2').value){e.textContent='New passwords do not match.';return}
+  const p=$('#s3').value;if(dig(p).length<10){e.textContent='Enter a valid mobile number.';return}
+  if(a)ls('cm_pw',await SH(a));ls('cm_ph',p.trim());d.close();toast('Security updated')};
+ d.showModal();
+}
+const KB=[
+{k:['hello','hi ','salam','hey','assalam'],a:'Hello! I am your Chakesar assistant. Ask me how to use any part of the app, or ask things like <b>“What is my profit this month?”</b>'},
+{k:['profit','net ','kamai','nafa','income'],a:()=>{const c=calc(cm());return`This month: sales Rs ${fmt(c.sale)}, gross profit Rs ${fmt(c.gross)}, deductions Rs ${fmt(c.ded)}.<br><b>Net profit: Rs ${fmt(c.net)}</b><br><br>Formula: sale − cost = gross profit. Then expenses, salaries, rent paid, paid bills and loans given are subtracted. Rent you collect is added.`}},
+{k:['today','aaj'],a:()=>{const S=D.sales.filter(r=>r.date==td());return`Today: ${S.length} sale(s), total Rs ${fmt(sum(S,'sale'))}, profit Rs ${fmt(sum(S,r=>N(r.sale)-N(r.cost)))}.`}},
+{k:['add sale','new sale','record sale','sale','sell','daily sale'],a:'Tap <b>Sale</b> on Home (or open Sales → Add sale). Enter the date, item, <b>sale amount</b> and your <b>cost</b>. Profit = sale − cost is added to your profit automatically.'},
+{k:['expense','kharcha','spend'],a:'Open <b>Expenses → Add expense</b>. Choose Daily or Monthly, write what it was for and the amount. It is deducted from net profit in that month.'},
+{k:['salary','employee','staff','payroll','advance','wages'],a:'1) <b>More → Employees</b>: add each employee with a monthly salary.<br>2) <b>More → Salary</b> (or the Salary button on Home): record every payment as Salary, Advance or Bonus.<br>All payments are deducted from net profit in the month paid.'},
+{k:['loan','udhar','qarz'],a:'Open <b>More → Loans</b>. Choose <b>Given</b> (you lent money) or <b>Taken</b> (you borrowed). Use “Mark returned” when it is paid back. Loans <b>given</b> and not yet returned are deducted from profit; loans taken are shown as money you owe.'},
+{k:['rent','kiraya','dokan','center'],a:'Open <b>More → Rent</b>. Choose the property (Center, Dokan, Room…) and <b>I am: Paying</b> (you pay rent, deducted from profit) or <b>Collecting</b> (tenant pays you, added to income). Fill “Paid / received” as money moves, or tap Mark paid / Mark received.'},
+{k:['bill','electricity','gas','water','internet','wapda'],a:'Open <b>More → Bills</b> and add the bill with type, month and amount. Keep it <b>Unpaid</b> until you pay it, then tap <b>Mark paid</b>. Only paid bills reduce profit.'},
+{k:['invoice','supplier','company','purchase','salesman'],a:'Open <b>Invoices → Add invoice</b>. Enter company, invoice no, total and what you paid. The balance shows as “Due”. Tap <b>Mark paid</b> when you clear it. Purchases are tracked as payables; profit comes from your sales entries.'},
+{k:['mark paid','settle','mark returned','received'],a:'On any card with a balance, tap <b>Mark paid / returned / received</b> to settle it in full. For part payment, tap <b>Edit</b> and change the paid amount.'},
+{k:['delete','undo','remove','galat'],a:'Tap <b>Delete</b> on a card. A bar appears at the bottom for 5 seconds with <b>Undo</b>. Use <b>Edit</b> to correct mistakes.'},
+{k:['backup','restore','data lost','new phone','save data'],a:'Open <b>More → Backup</b>, tap <b>Copy backup</b> and save it in Notes or WhatsApp. On a new phone, paste it into Backup and tap <b>Restore</b>. Do this every week.'},
+{k:['install','shortcut','home screen'],a:'Open the app link in Chrome and tap the <b>Install app</b> button in the header (or Chrome menu ⋮ → Install app). On iPhone use Safari → Share → Add to Home Screen.'},
+{k:['password','forgot','otp','login','reset','security'],a:'Forgot it? On the login screen tap <b>Forgot password?</b>, enter your registered mobile number, and a 6-digit code appears on screen. Enter it and choose a new password. You can change the password or recovery number in <b>More → Security</b>.'},
+{k:['theme','dark','light','night'],a:'Tap the <b>Theme</b> button in the top bar to switch between light and dark mode.'},
+{k:['due','owe','pending','outstanding','payable'],a:()=>{const f=(a,t,p)=>sum(a,r=>N(r[t])-N(r[p]));return`Outstanding now:<br>• Suppliers payable: Rs ${fmt(f(D.invoices,'total','paid'))}<br>• Loan to receive: Rs ${fmt(f(D.loans.filter(r=>r.dir=='Given'),'amount','back'))}<br>• Loan to pay: Rs ${fmt(f(D.loans.filter(r=>r.dir=='Taken'),'amount','back'))}<br>• Rent to collect: Rs ${fmt(f(D.rent.filter(r=>r.dir=='Collecting'),'rent','got'))}<br>• Rent to pay: Rs ${fmt(f(D.rent.filter(r=>r.dir=='Paying'),'rent','got'))}<br>• Unpaid bills: Rs ${fmt(sum(D.bills.filter(r=>r.st!='Paid'),'amount'))}`}},
+{k:['contact','developer','support','phone number','help me'],a:'Developer contact: <b>03485427214</b>.'},
+{k:['thank','shukria','great'],a:'You are welcome! Ask me anytime.'}];
+function ans(t){const x=' '+t.toLowerCase().replace(/[^a-z0-9 ]/g,' ')+' ';let b=null,bs=0;for(const e of KB){let s=0;for(const k of e.k)if(x.includes(k.trim()=='hi'?' hi ':k))s+=k.length;if(s>bs){bs=s;b=e}}return b?(typeof b.a=='function'?b.a():b.a):'I can help with: <b>profit, add sale, expenses, salary, loans, rent, bills, invoices, backup, forgot password, install</b>. Try one of these words.'}
+function say(h,c){const m=$('#am');m.insertAdjacentHTML('beforeend',`<div class="mb ${c}">${h}</div>`);m.scrollTop=m.scrollHeight}
+function ask(t){t=t.trim();if(!t)return;say(esc(t),'u');$('#ain').value='';const m=$('#am');m.insertAdjacentHTML('beforeend','<div class="mb b" id="ty">…</div>');m.scrollTop=m.scrollHeight;setTimeout(()=>{const e=$('#ty');if(e)e.remove();say(ans(t),'b')},450)}
+function chat(){const p=$('#ai');p.hidden=false;if(!$('#am').children.length){say('Hi! I am <b>Medi Assistant</b>. I can explain every part of this app and answer questions about your numbers. What do you need?','b');$('#aq').innerHTML=['What is my profit?','How to add a sale','How is salary counted','Forgot password','How to back up','What is due?'].map(s=>`<button>${s}</button>`).join('');$('#aq').querySelectorAll('button').forEach(b=>b.onclick=()=>ask(b.textContent))}$('#ain').focus()}
+$('#fab').innerHTML=ico(IC.ai);$('#aho').innerHTML=ico(IC.ai);$('#fab').onclick=chat;$('#ax').onclick=()=>$('#ai').hidden=true;$('#asd').onclick=()=>ask($('#ain').value);$('#ain').onkeydown=e=>{if(e.key=='Enter')ask($('#ain').value)};
+$('#hlo').innerHTML=LOGO(38);
+const setTh=t=>{document.documentElement.dataset.theme=t;ls('cm_th',t)};{const t=ls('cm_th');if(t)setTh(t)}
+$('#th').onclick=()=>{const c=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');setTh(c=='dark'?'light':'dark')};
+lv('in');
+let ev=null;addEventListener('beforeinstallprompt',e=>{e.preventDefault();ev=e;$('#ins').hidden=false});
 $('#ins').onclick=async()=>{if(!ev)return;ev.prompt();await ev.userChoice;ev=null;$('#ins').hidden=true};
 addEventListener('appinstalled',()=>{$('#ins').hidden=true});
 if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+try{if(sessionStorage.getItem('cm_in'))show()}catch(e){}
 </script></body></html>

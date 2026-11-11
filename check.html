@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Install check</title>
+<body style="font:16px system-ui;padding:20px;max-width:520px;margin:auto"><h2>Install check</h2><div id="o">Checking…</div>
+<script>
+const o=document.getElementById('o'),L=(ok,t)=>o.insertAdjacentHTML('beforeend',`<p>${ok?'✅':'❌'} ${t}</p>`);
+(async()=>{o.innerHTML='';
+L(location.protocol=='https:','Secure (https) address');
+for(const f of ['index.html','manifest.json','sw.js','icon-192.png','icon-512.png','icon-maskable-512.png']){try{const r=await fetch(f,{cache:'no-store'});L(r.ok,f+(r.ok?' found':' NOT FOUND ('+r.status+')'))}catch(e){L(0,f+' failed to load')}}
+try{const m=await (await fetch('manifest.json')).json();L(m.icons&&m.icons.length>=2,'Manifest is valid JSON')}catch(e){L(0,'Manifest is not valid')}
+if('serviceWorker' in navigator){try{const r=await navigator.serviceWorker.register('sw.js');L(1,'Service worker registered (scope '+r.scope+')')}catch(e){L(0,'Service worker failed: '+e.message)}}else L(0,'Service workers not supported in this browser');
+L(matchMedia('(display-mode: standalone)').matches?0:1,matchMedia('(display-mode: standalone)').matches?'Already running as an installed app':'Running in the browser');
+})();
+</script>
