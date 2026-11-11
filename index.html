@@ -1,0 +1,175 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Chakesar Medicose</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0f6b52"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf1ef;--sf:#fff;--ink:#12302b;--mut:#5d7771;--ln:#d3e1dc;--ac:#0f6b52;--ac2:#e3f2ed;--warn:#b4531a;--bad:#b3261e;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1816;--sf:#142521;--ink:#e3f1ed;--mut:#92b0a8;--ln:#254039;--ac:#3dbf98;--ac2:#17332c;--warn:#e8935a;--bad:#ff8a80;--on:#06201a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1816;--sf:#142521;--ink:#e3f1ed;--mut:#92b0a8;--ln:#254039;--ac:#3dbf98;--ac2:#17332c;--warn:#e8935a;--bad:#ff8a80;--on:#06201a;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}.dv{margin-top:16px;font-size:13px;color:var(--mut);text-align:center}.dv a{color:var(--ac);font-weight:700;text-decoration:none}footer.dv{padding:8px 16px 24px}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Manrope,system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+.hd{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--sf);border-bottom:1px solid var(--ln)}
+.hd b{font-size:18px;font-weight:800;flex:1}.hd small{display:block;color:var(--mut);font-weight:400;font-size:12px}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;background:var(--sf);border-bottom:1px solid var(--ln)}
+nav button{white-space:nowrap;border:1px solid var(--ln);background:none;border-radius:20px;padding:7px 14px;cursor:pointer;font-weight:600}
+nav button.on{background:var(--ac);color:var(--on);border-color:var(--ac)}
+main{padding:16px;max-width:1100px;margin:auto}
+h2{margin:0 0 12px;font-size:20px;font-weight:800}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.t{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px}
+.t span{display:block;color:var(--mut);font-size:12.5px}.t b{font-size:20px;font-weight:800}
+.t.w b{color:var(--warn)}.t.p b{color:var(--ac)}.t.n b{color:var(--bad)}
+.bar{display:flex;gap:8px;margin-bottom:12px}
+.bar input{flex:1;min-width:0}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--ln);border-radius:9px;background:var(--sf)}
+.bt{border:0;background:var(--ac);color:var(--on);padding:9px 16px;border-radius:9px;font-weight:700;cursor:pointer;white-space:nowrap}
+.bt.s{background:var(--ac2);color:var(--ac)}.bt.d{background:none;color:var(--bad);padding:6px 8px}
+.w2{overflow-x:auto;background:var(--sf);border:1px solid var(--ln);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--ln);white-space:nowrap}
+th{font-size:12.5px;color:var(--mut);font-weight:600}td.r,th.r{text-align:right}
+td.w{color:var(--warn);font-weight:700}td.p{color:var(--ac);font-weight:700}td.n{color:var(--bad);font-weight:700}
+.em{padding:28px;text-align:center;color:var(--mut)}
+dialog{border:1px solid var(--ln);border-radius:14px;background:var(--sf);color:var(--ink);width:min(440px,94vw);padding:18px}
+dialog::backdrop{background:#0008}
+label{display:block;font-size:12.5px;color:var(--mut);margin:10px 0 3px}
+.ac{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+#lg{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--ac)}
+#lg .c{background:var(--sf);border-radius:18px;padding:28px 24px;width:min(360px,100%);text-align:center}
+#lg h1{margin:12px 0 2px;font-size:24px;font-weight:800}#lg p{margin:0 0 18px;color:var(--mut)}
+#er{color:var(--bad);min-height:20px;margin:8px 0 0;font-size:13px}
+textarea{height:180px;font:12px/1.4 monospace}
+.hd{background:linear-gradient(120deg,#0b4d3b,#14896a);color:#fff;border:0}.hd small{color:#c4eadf}.hd .bt.s{background:#ffffff26;color:#fff}.hd #ins{background:#fff;color:#0b4d3b}
+#lg{background:linear-gradient(135deg,#0b4d3b,#14896a 70%,#2fc79a)!important}
+.t{border-radius:14px;box-shadow:0 1px 2px #0000000d}
+.hero{position:relative;overflow:hidden;border-radius:22px;padding:22px;color:#fff;margin-bottom:16px;background:radial-gradient(circle at 92% -10%,#2fc79a66,transparent 45%),radial-gradient(circle at 0 110%,#06281f,transparent 55%),linear-gradient(135deg,#0e6049,#0a3d31);box-shadow:0 16px 32px -16px #0a3d31}
+.hero small{opacity:.8;display:block}.hero .big{font-size:clamp(32px,9vw,46px);font-weight:800;letter-spacing:-.02em;margin:2px 0 16px}
+.hr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.hr div{background:#ffffff1f;border-radius:13px;padding:10px 12px}.hr span{display:block;font-size:12px;opacity:.85}.hr b{font-size:15px}
+.qa{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.qa button,.k{border:1px solid var(--ln);background:var(--sf);color:var(--ink);cursor:pointer;box-shadow:0 1px 2px #0000000d}
+.qa button{border-radius:14px;padding:12px 4px;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:600;font-size:13px}
+.ch{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--ac2);color:var(--ac);flex:none}
+.ch.w{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}.ch.n{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.k{display:flex;gap:12px;align-items:center;text-align:left;border-radius:16px;padding:14px}.k span{display:block;color:var(--mut);font-size:12.5px}.k b{font-size:17px;font-weight:800}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:16px;box-shadow:0 1px 2px #0000000d}.card h3{margin:0 0 4px;font-size:16px;font-weight:800}
+.two{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:860px){.two{grid-template-columns:3fr 2fr}}
+.lg{display:flex;gap:14px;font-size:12.5px;color:var(--mut);margin:4px 0 8px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
+.rw{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--ln)}.rw:last-child{border:0}.rw div:nth-child(2){flex:1;min-width:0}.rw b{display:block;font-size:14px}.rw span{font-size:12.5px;color:var(--mut)}.rw em{font-style:normal;font-weight:800}
+.sh{display:flex;justify-content:space-between;align-items:baseline}.sh h2{margin:0 0 12px}
+</style></head><body>
+<div id="lg"><div class="c"><div id="lgo"></div><h1>Chakesar Medicose</h1><p>Sign in to continue</p>
+<input id="pw" type="password" placeholder="Password" autocomplete="current-password">
+<div id="er"></div><button class="bt" style="width:100%;margin-top:6px" id="go">Login</button><div class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></div></div></div>
+<div id="app" hidden>
+<div class="hd"><span id="hlo"></span><b>Chakesar Medicose<small>Business manager</small></b><button class="bt" id="ins" hidden>Install app</button><button class="bt s" id="out">Logout</button></div>
+<nav id="nv"></nav><main id="mn"></main><footer class="dv">Developer contact: <a href="tel:03485427214">03485427214</a></footer></div>
+<dialog id="dg"><h2 id="dt"></h2><div id="df"></div><div class="ac"><button class="bt s" id="dc">Cancel</button><button class="bt" id="ds">Save</button></div></dialog>
+<script>
+const LOGO=(s)=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64" aria-label="Chakesar Medicose logo"><rect width="64" height="64" rx="16" fill="#0f6b52"/><path d="M32 10 50 17v14c0 11-8 19-18 23C22 50 14 42 14 31V17z" fill="#fff"/><path d="M28 21h8v7h7v8h-7v7h-8v-7h-7v-8h7z" fill="#0f6b52"/></svg>`;
+const $=s=>document.querySelector(s),N=v=>+v||0,fmt=n=>N(n).toLocaleString('en-PK'),td=()=>new Date().toISOString().slice(0,10);
+const sum=(R,k)=>R.reduce((a,r)=>a+N(r[k]),0),KEY='cm_data_v2';
+const M={
+invoices:{t:'Purchase invoices',n:'invoice',f:[['inv','Invoice no'],['date','Date','date'],['company','Company'],['sales','Salesman'],['total','Total','number'],['paid','Paid','number'],['note','Note']],c:[['Balance',r=>N(r.total)-N(r.paid),'w']],s:R=>[['Total purchases',sum(R,'total')],['Paid',sum(R,'paid')],['Payable',sum(R,'total')-sum(R,'paid'),'w']]},
+sales:{t:'Sales & profit',n:'sale',f:[['date','Date','date'],['desc','Item / details'],['sale','Sale amount','number'],['cost','Cost','number'],['note','Note']],c:[['Profit',r=>N(r.sale)-N(r.cost),'p']],s:R=>[['Sales',sum(R,'sale')],['Cost',sum(R,'cost')],['Profit',sum(R,'sale')-sum(R,'cost'),'p']]},
+loans:{t:'Loans',n:'loan',f:[['date','Date','date'],['person','Person name'],['dir','Type','select',['Given','Taken']],['amount','Amount','number'],['back','Returned','number'],['note','Note']],c:[['Remaining',r=>N(r.amount)-N(r.back),'w']],s:R=>{const f=d=>R.filter(r=>r.dir==d).reduce((a,r)=>a+N(r.amount)-N(r.back),0);return[['Given, to receive',f('Given'),'p'],['Taken, to pay',f('Taken'),'w']]}},
+rent:{t:'Rent',n:'rent entry',f:[['kind','Property','select',['Center','Dokan','Room','House','Other']],['tenant','Tenant name'],['contact','Contact'],['month','Month','month'],['rent','Rent','number'],['got','Received','number'],['note','Note']],c:[['Due',r=>N(r.rent)-N(r.got),'w']],s:R=>[['Rent total',sum(R,'rent')],['Received',sum(R,'got'),'p'],['Due',sum(R,'rent')-sum(R,'got'),'w']]},
+bills:{t:'Bills',n:'bill',f:[['date','Date','date'],['kind','Bill type','select',['Electricity','Gas','Water','Internet','Other']],['month','Month','month'],['amount','Amount','number'],['st','Status','select',['Unpaid','Paid']],['note','Note']],c:[],s:R=>[['Total bills',sum(R,'amount')],['Unpaid',R.filter(r=>r.st!='Paid').reduce((a,r)=>a+N(r.amount),0),'w']]},
+staff:{t:'Employees',n:'employee',f:[['name','Name'],['tel','Contact'],['start','Start date','date'],['end','End date','date'],['sal','Salary','number'],['adv','Advance','number'],['note','Note']],c:[['Balance',r=>N(r.sal)-N(r.adv),'w'],['Status',r=>r.end?'Left':'Active','']],s:R=>[['Employees',R.filter(r=>!r.end).length+' active'],['Monthly salary',R.filter(r=>!r.end).reduce((a,r)=>a+N(r.sal),0)],['Advance given',sum(R,'adv'),'w']]},
+exp:{t:'Expenses',n:'expense',f:[['date','Date','date'],['kind','Type','select',['Daily','Monthly']],['head','Expense for'],['amount','Amount','number'],['note','Note']],c:[],s:R=>{const m=td().slice(0,7);return[['Total',sum(R,'amount')],['This month',R.filter(r=>(r.date||'').startsWith(m)).reduce((a,r)=>a+N(r.amount),0),'n'],['Today',R.filter(r=>r.date==td()).reduce((a,r)=>a+N(r.amount),0)]]}}
+};
+const SEED={invoices:[{id:'1794194457724',inv:'INV-001',date:'2026-11-09',company:'Bosh Pharma',sales:'Khan',total:'25000',paid:'24000',note:''},{id:'1794194517127',inv:'INV-0002',date:'2026-11-09',company:'Blossom',sales:'Amjid',total:'15000',paid:'13500',note:''},{id:'1794194542036',inv:'INV-0003',date:'2026-11-09',company:'Kamran',sales:'Hilton',total:'12000',paid:'12000',note:''}]};
+let D={},tab='home',q='',mem=false;
+try{D=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){D={}}
+if(!Object.keys(D).length)D=JSON.parse(JSON.stringify(SEED));
+Object.keys(M).forEach(k=>D[k]=D[k]||[]);
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#lgo').innerHTML=LOGO(72);$('#hlo').innerHTML=LOGO(38);
+function login(){if($('#pw').value==='faizan1122'){try{sessionStorage.setItem('cm_in','1')}catch(e){}mem=true;show()}else{$('#er').textContent='Incorrect password. Please try again.'}}
+function show(){$('#lg').hidden=true;$('#app').hidden=false;render()}
+$('#go').onclick=login;$('#pw').onkeydown=e=>{if(e.key=='Enter')login()};
+$('#out').onclick=()=>{try{sessionStorage.removeItem('cm_in')}catch(e){}mem=false;$('#app').hidden=true;$('#lg').hidden=false;$('#pw').value='';$('#er').textContent=''};
+try{if(sessionStorage.getItem('cm_in'))show()}catch(e){}
+function render(){
+ const tabs=[['home','Dashboard'],...Object.keys(M).map(k=>[k,M[k].t]),['bk','Backup']];
+ $('#nv').innerHTML=tabs.map(([k,l])=>`<button class="${k==tab?'on':''}" data-k="${k}">${l}</button>`).join('');
+ $('#nv').querySelectorAll('button').forEach(b=>b.onclick=()=>{tab=b.dataset.k;q='';render()});
+ tab=='home'?home():tab=='bk'?backup():list(tab);
+}
+const tile=([l,v,c])=>`<div class="t ${c||''}"><span>${l}</span><b>${typeof v=='number'?'Rs '+fmt(v):v}</b></div>`;
+function ico(p){return`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${p}"/></svg>`}
+const IC={sales:'M3 17l6-6 4 4 8-8M15 7h6v6',exp:'M3 7h15a3 3 0 013 3v8a2 2 0 01-2 2H5a2 2 0 01-2-2zM3 7l2-3h11M17 14h.01',invoices:'M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6',bills:'M13 2L4 14h7l-1 8 9-12h-7z',down:'M12 5v14M6 13l6 6 6-6',up:'M12 19V5M6 11l6-6 6 6',rent:'M3 11l9-8 9 8M5 10v10h14V10',staff:'M16 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9.5 10a3.5 3.5 0 100-7 3.5 3.5 0 000 7zM21 20v-2a4 4 0 00-3-3.9',truck:'M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z'};
+function home(){
+ const m=td().slice(0,7),inM=r=>(r.date||'').startsWith(m);
+ const sl=D.sales.filter(inM),sv=sum(sl,'sale'),pf=sv-sum(sl,'cost'),ex=D.exp.filter(inM).reduce((a,r)=>a+N(r.amount),0),net=pf-ex;
+ const lo=d=>D.loans.filter(r=>r.dir==d).reduce((a,r)=>a+N(r.amount)-N(r.back),0);
+ const h=new Date().getHours(),g=h<12?'Good morning':h<17?'Good afternoon':'Good evening',dt=new Date().toLocaleDateString('en',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+ const days=[...Array(7)].map((_,i)=>new Date(Date.now()-(6-i)*864e5)),ds=days.map(d=>d.toISOString().slice(0,10));
+ const S=ds.map(d=>sum(D.sales.filter(r=>r.date==d),'sale')),E=ds.map(d=>sum(D.exp.filter(r=>r.date==d),'amount')),mx=Math.max(1,...S,...E);
+ const bar=(v,x,c)=>{const h=v?Math.max(4,v/mx*96):0;return`<rect x="${x}" y="${108-h}" width="14" height="${h}" rx="4" style="fill:var(${c})"/>`};
+ const chart=ds.map((d,i)=>{const x=14+i*44;return bar(S[i],x,'--ac')+bar(E[i],x+16,'--warn')+`<text x="${x+15}" y="128" text-anchor="middle" font-size="10" style="fill:var(--mut)">${days[i].toLocaleDateString('en',{weekday:'short'})}</text>`}).join('');
+ const K=[['Suppliers payable',sum(D.invoices,'total')-sum(D.invoices,'paid'),'truck','w','invoices'],['Loan to receive',lo('Given'),'down','','loans'],['Loan to pay',lo('Taken'),'up','n','loans'],['Rent due',D.rent.reduce((a,r)=>a+Math.max(0,N(r.rent)-N(r.got)),0),'rent','w','rent'],['Unpaid bills',D.bills.filter(r=>r.st!='Paid').reduce((a,r)=>a+N(r.amount),0),'bills','w','bills'],['Staff advance',sum(D.staff.filter(r=>!r.end),'adv'),'staff','','staff']];
+ const A=[...D.sales.map(r=>({d:r.date,id:r.id,t:r.desc||'Sale',s:'Sale',v:N(r.sale),i:'sales',c:''})),...D.exp.map(r=>({d:r.date,id:r.id,t:r.head||'Expense',s:'Expense',v:-N(r.amount),i:'exp',c:'n'})),...D.invoices.map(r=>({d:r.date,id:r.id,t:r.company||'Invoice',s:'Purchase '+(r.inv||''),v:-N(r.total),i:'invoices',c:'w'}))].sort((a,b)=>(b.d||'').localeCompare(a.d||'')||b.id-a.id).slice(0,6);
+ $('#mn').innerHTML=`<div class="hero"><small>${g}, ${dt}</small><small>Net profit this month</small><div class="big">${net<0?'− ':''}Rs ${fmt(Math.abs(net))}</div><div class="hr"><div><span>Sales</span><b>Rs ${fmt(sv)}</b></div><div><span>Profit</span><b>Rs ${fmt(pf)}</b></div><div><span>Expenses</span><b>Rs ${fmt(ex)}</b></div></div></div>
+ <div class="qa">${[['sales','Sale'],['exp','Expense'],['invoices','Invoice'],['bills','Bill']].map(([k,l])=>`<button data-add="${k}"><span class="ch">${ico(IC[k])}</span>${l}</button>`).join('')}</div>
+ <div class="two" style="margin-bottom:16px"><div class="card"><h3>Last 7 days</h3><div class="lg"><span><i style="background:var(--ac)"></i>Sales</span><span><i style="background:var(--warn)"></i>Expenses</span></div><svg viewBox="0 0 322 136" width="100%" role="img" aria-label="Sales and expenses for the last 7 days"><line x1="0" x2="322" y1="109" y2="109" style="stroke:var(--ln)"/>${chart}</svg></div>
+ <div class="card"><h3>Recent activity</h3>${A.length?A.map(a=>`<div class="rw"><span class="ch ${a.c}">${ico(IC[a.i])}</span><div><b>${esc(a.t)}</b><span>${esc(a.s)} · ${esc(a.d)}</span></div><em style="color:var(--${a.v<0?'bad':'ac'})">${a.v<0?'−':'+'}${fmt(Math.abs(a.v))}</em></div>`).join(''):'<div class="em">No activity yet. Add your first sale or expense.</div>'}</div></div>
+ <div class="sh"><h2>Outstanding</h2></div><div class="g">${K.map(([l,v,i,c,t])=>`<button class="k" data-go="${t}"><span class="ch ${c}">${ico(IC[i])}</span><div><span>${l}</span><b>Rs ${fmt(v)}</b></div></button>`).join('')}</div>`;
+ $('#mn').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{tab=b.dataset.go;q='';render()});
+ $('#mn').querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{tab=b.dataset.add;q='';render();edit(tab)});
+}
+function cols(m){return [...m.f.map(([k,l,t])=>({l,t,g:r=>r[k]})),...m.c.map(([l,f,c])=>({l,t:'c',c,g:f}))]}
+function body(k){
+ const m=M[k],C=cols(m),s=q.toLowerCase();
+ let R=D[k].filter(r=>!s||JSON.stringify(r).toLowerCase().includes(s));
+ R=[...R].reverse();
+ if(!R.length)return`<div class="em">${D[k].length?'No matching records.':'No '+m.n+' records yet. Tap Add to create one.'}</div>`;
+ return`<table><tr>${C.map(c=>`<th class="${c.t=='number'||c.t=='c'&&c.c?'r':''}">${c.l}</th>`).join('')}<th></th></tr>`+R.map(r=>`<tr>${C.map(c=>{const v=c.g(r);const num=c.t=='number'||(c.t=='c'&&c.c);const cl=num?'r':'';const sc=c.t=='c'&&c.c?(c.c=='p'?(v<0?'n':'p'):(v>0?'w':'')):'';return`<td class="${cl} ${sc}">${num?fmt(v):esc(v)}</td>`}).join('')}<td class="r"><button class="bt d" data-e="${r.id}">Edit</button><button class="bt d" data-x="${r.id}">Delete</button></td></tr>`).join('')+'</table>';
+}
+function wire(k){
+ $('#tb').innerHTML=body(k);
+ $('#tb').querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>edit(k,b.dataset.e));
+ $('#tb').querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{if(confirm('Delete this record?')){D[k]=D[k].filter(r=>r.id!=b.dataset.x);save();render()}});
+}
+function list(k){
+ const m=M[k];
+ $('#mn').innerHTML=`<h2>${m.t}</h2><div class="g">${m.s(D[k]).map(tile).join('')}</div><div class="bar"><input id="sq" placeholder="Search" value="${esc(q)}"><button class="bt" id="ad">Add ${m.n}</button></div><div class="w2" id="tb"></div>`;
+ $('#sq').oninput=e=>{q=e.target.value;wire(k)};$('#ad').onclick=()=>edit(k);wire(k);
+}
+let cur=null;
+function edit(k,id){
+ const m=M[k],r=id?D[k].find(x=>x.id==id):{};cur={k,id};
+ $('#dt').textContent=(id?'Edit ':'New ')+m.n;
+ $('#df').innerHTML=m.f.map(([f,l,t,o])=>{const v=r[f]??(t=='date'?td():t=='month'?td().slice(0,7):'');
+  return`<label>${l}</label>`+(t=='select'?`<select data-f="${f}">${o.map(x=>`<option ${x==v?'selected':''}>${x}</option>`).join('')}</select>`:`<input data-f="${f}" type="${t||'text'}" ${t=='number'?'inputmode="decimal"':''} value="${esc(v)}">`)}).join('');
+ $('#dg').showModal();
+}
+$('#dc').onclick=()=>$('#dg').close();
+$('#ds').onclick=()=>{
+ const {k,id}=cur,o={};$('#df').querySelectorAll('[data-f]').forEach(e=>o[e.dataset.f]=e.value.trim());
+ if(id){const i=D[k].findIndex(x=>x.id==id);D[k][i]={...D[k][i],...o}}else D[k].push({id:String(Date.now()),...o});
+ save();$('#dg').close();render();
+};
+function backup(){
+ $('#mn').innerHTML=`<h2>Backup & restore</h2><p style="color:var(--mut)">Data is saved only on this phone or browser. Copy a backup regularly and keep it in Notes or WhatsApp.</p>
+ <div class="bar"><button class="bt" id="cp">Copy backup</button><button class="bt s" id="fl">Open backup file</button><input type="file" id="fi" accept=".json" hidden></div>
+ <textarea id="ta" placeholder="Paste a backup here to restore"></textarea>
+ <div class="bar" style="margin-top:10px"><button class="bt s" id="rs">Restore from pasted text</button></div><div id="ms" style="color:var(--ac)"></div>`;
+ $('#ta').value=JSON.stringify(D);
+ $('#cp').onclick=async()=>{$('#ta').select();try{await navigator.clipboard.writeText($('#ta').value);$('#ms').textContent='Backup copied.'}catch(e){document.execCommand('copy');$('#ms').textContent='Backup selected. Copy it manually.'}};
+ $('#fl').onclick=()=>$('#fi').click();
+ $('#fi').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('#ta').value=r.result;$('#ms').textContent='File loaded. Tap Restore.'};r.readAsText(f)};
+ $('#rs').onclick=()=>{
+  try{let d=JSON.parse($('#ta').value);
+   if(Array.isArray(d))d={invoices:d.map(r=>({...r,id:r.id||String(Date.now()+Math.random())}))};
+   if(!confirm('This will replace the current data. Continue?'))return;
+   D={};Object.keys(M).forEach(k=>D[k]=Array.isArray(d[k])?d[k]:[]);save();render();
+  }catch(e){$('#ms').style.color='var(--bad)';$('#ms').textContent='Invalid backup.'}
+ };
+}
+let ev=null;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();ev=e;$('#ins').hidden=false});
+$('#ins').onclick=async()=>{if(!ev)return;ev.prompt();await ev.userChoice;ev=null;$('#ins').hidden=true};
+addEventListener('appinstalled',()=>{$('#ins').hidden=true});
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script></body></html>
